@@ -6,12 +6,20 @@ import { Nav } from "../components/nav";
 
 configure({
   spendingLimitOptions: {
-    GlobalDESOLimit: 10000000, // 0.01 DESO
+    CreatorCoinOperationLimitMap: {
+      "" :{
+        "any" : 10000
+      }
+      
+    },
+    GlobalDESOLimit: 10000000000, // 0.01 DESO
     TransactionCountLimitMap: {
       SUBMIT_POST: "UNLIMITED",
+      CREATOR_COIN: "UNLIMITED",
+    },
     },
   },
-});
+);
 
 export const Root = () => {
   const { isLoading } = useContext(DeSoIdentityContext);

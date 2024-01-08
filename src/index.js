@@ -8,6 +8,8 @@ import { Root } from "./routes/root";
 import { SignAndSubmitTx } from "./routes/sign-and-submit-tx";
 import { SwitchAccount } from "./routes/switch-account";
 import { User } from "./routes/user";
+import { ListCoins } from "./routes/listcoins";
+
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-and-submit-tx",
         element: <SignAndSubmitTx />,
+      },
+      {
+        path: "/ListCoins",
+        element: <ListCoins />,
       },
       {
         path: "/switch-account",
